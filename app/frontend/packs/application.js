@@ -1,5 +1,5 @@
 import Rails from "@rails/ujs"
-import '../styles/application.scss'
+import '../styles/application'
 import 'bootstrap/dist/js/bootstrap'
 
 Rails.start()
