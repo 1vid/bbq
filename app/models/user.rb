@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+
   EMAIL_VALIDATION_REGEX = URI::MailTo::EMAIL_REGEXP
 
   has_many :events

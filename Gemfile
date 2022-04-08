@@ -6,6 +6,7 @@ ruby '3.0.0'
 gem 'rails', '~> 6.1.5'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
+gem 'devise', '~> 4.8.1'
 
 group :production do
   gem 'pg'
