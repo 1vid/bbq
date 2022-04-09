@@ -1,0 +1,19 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+<% if resource.errors.any? %>
+  <div id="error_explanation">
+    <h3 class="text-center font-weight-light" style="font-family: VT323">
+      <%= I18n.t("errors.messages.not_saved",
+                 count: resource.errors.count,
+                 resource: resource.class.model_name.human.downcase)
+       %>
+    </h3>
+    <ul>
+      <% resource.errors.full_messages.each do |message| %>
+        <li class="p-2 bg-primary text-white" style="font-family: VT323"><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

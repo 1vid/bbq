@@ -1,0 +1,27 @@
+<h2>Войти</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="mb-3">
+    <%= f.label "Электронная почта", class: "form-label" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label "Пароль", class: "form-label" %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label "Запомнить меня" %>
+    </div>
+  <% end %>
+  <div class="raw mt-4">
+    <div class="actions float-start me-3">
+      <%= f.submit "Войти", class: "btn btn-outline-success" %>
+    </div>
+    <a class="btn btn-outline-secondary float-start me-3" role="button" href="/users/sign_up">Зарегестрироваться</a>
+    <a class="btn btn-outline-warning" role="button" href="/users/password/new">Восстановить пароль</a>
+  </div>
+<% end %>

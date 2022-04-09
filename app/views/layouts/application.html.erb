@@ -10,18 +10,20 @@
     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <%= render 'partials/navigation' %>
     <div class="container">
       <p id="notice"><%= notice %></p>
     </div>
+
     <div class="container">
       <%= yield %>
     </div>
-    <div class="raw pt-20">
-      <div class="container pt-20">
-        <footer><p>&copy; Velichko Ilia 2022</p></footer>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">&copy; Velichko Ilia 2022</span>
       </div>
-    </div>
+    </footer>
   </body>
 </html>

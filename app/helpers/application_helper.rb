@@ -4,4 +4,8 @@ module ApplicationHelper
     asset_pack_path('media/images/user.png')
 
   end
+
+  def devise_mapping
+    Devise.mappings[:user]
+  end
 end
