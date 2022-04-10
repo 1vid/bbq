@@ -15,15 +15,6 @@ ru:
         datetime: 'Дата и время'
         description: 'Описание'
   errors:
-    messages:
-      not_saved:
-        one: "1 ошибка не позволила сохранить %{resource}:"
-        other: "%{count} ошибки не позволили сохранить %{resource}:"
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
     one: '%{count} ошибка'
     few: '%{count} ошибки'
     many: '%{count} ошибок'
