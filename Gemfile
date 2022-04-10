@@ -8,6 +8,7 @@ gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'devise', '~> 4.8.1'
 gem 'devise-i18n', '~> 1.10', '>= 1.10.2'
+gem 'rails-i18n', '~> 7.0.3'
 
 group :production do
   gem 'pg'
