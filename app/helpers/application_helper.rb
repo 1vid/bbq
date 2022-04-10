@@ -8,4 +8,8 @@ module ApplicationHelper
   def devise_mapping
     Devise.mappings[:user]
   end
+
+  def fa_icon(icon_class)
+    content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
 end

@@ -14,10 +14,6 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
-  errors:
-    one: '%{count} ошибка'
-    few: '%{count} ошибки'
-    many: '%{count} ошибок'
 
   controllers:
     users:
@@ -26,5 +22,27 @@ ru:
       updated: "Событие обновлено"
       created: "Ура, создали событие, го всех звать"
       destroyed: "Событие безжалостно уничтожено"
+    comments:
+      created: "Спасио за коммент чувак"
+      error: "А вот фигушки, так нельзя"
+      destroyed: "Готово братюня, никто не увидит этого"
+    subscriptions:
+      created: 'Вы подписаны на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
+
+  errors:
+    one: '%{count} ошибка'
+    few: '%{count} ошибки'
+    many: '%{count} ошибок'
+  
   confirm:
     are_you_sure: 'Уверен бро?'
+
+  comments:
+    comment:
+      destroy_confirm: "Ты че пару пива убрал или реально хочешь удалит коммент?"
+
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
