@@ -20,7 +20,14 @@ ru:
       subscription:
         user_name: 'Твое имя странник'
         user_email: 'Email'
-      
+        attributes:
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              email_used: 'уже есть в базе бро'
+
   declinations:
     errors:
       one: "%{count} ошибка"
@@ -43,14 +50,6 @@ ru:
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
   
-  models:
-    subscription:
-      errors:
-        email_used: 'уже используется'
-        own_event: 'слуш ну ты же создатель, нафиг тебе подписыватся на него'
-      subscription:
-        user_name: 'Имя пользователя'
-        user_email: 'Эл. адрес'
       comment:
         body: 'Комментарий'
         user_name: 'Имя пользователя'
