@@ -46,3 +46,9 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+  
+  models:
+    subscription:
+      errors:
+        email_used: 'уже используется'
+        own_event: 'слуш ну ты же создатель, нафиг тебе подписыватся на него'
