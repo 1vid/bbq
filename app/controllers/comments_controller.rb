@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_event, only: [:create, :destroy]
   before_action :set_comment, only: [:destroy]
+  
   def create
     @new_comment = @event.comments.build(comment_params)
     @new_comment.user = current_user

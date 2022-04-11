@@ -14,7 +14,19 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
-
+      comment:
+        body: 'Комментарий'
+        user_name: 'Никнейм'
+      subscription:
+        user_name: 'Твое имя странник'
+        user_email: 'Email'
+      
+  declinations:
+    errors:
+      one: "%{count} ошибка"
+      few: "%{count} ошибки"
+      many: "%{count} ошибок"
+      
   controllers:
     users:
       updated: "Алилуя брат"
@@ -30,12 +42,21 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
-
-  errors:
-    one: '%{count} ошибка'
-    few: '%{count} ошибки'
-    many: '%{count} ошибок'
   
+  models:
+    subscription:
+      errors:
+        email_used: 'уже используется'
+        own_event: 'слуш ну ты же создатель, нафиг тебе подписыватся на него'
+      subscription:
+        user_name: 'Имя пользователя'
+        user_email: 'Эл. адрес'
+      comment:
+        body: 'Комментарий'
+        user_name: 'Имя пользователя'
+
+
+
   confirm:
     are_you_sure: 'Уверен бро?'
 
@@ -46,9 +67,5 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
-  
-  models:
-    subscription:
-      errors:
-        email_used: 'уже используется'
-        own_event: 'слуш ну ты же создатель, нафиг тебе подписыватся на него'
+
+

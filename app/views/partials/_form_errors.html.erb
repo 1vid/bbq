@@ -1,9 +1,12 @@
-<% errors = model.errors %>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+<% errors = model.errors %>
 <% if errors.any? %>
-  <div class="alert alert-danger">
+  <div class="alert alert-danger" style="font-family: Press Start 2P">
     <div class="lead buffer-bottom">
-      В вашей форме <%= errors.count %> ошибок
+       <%= t('declinations.errors', count: errors.count) %>
     </div>
 
     <ul>

@@ -2,7 +2,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-<% if resource.errors.any? %>
+<% if model.errors.any? %>
   <div id="error_explanation">
     <h3 class="text-center" style="font-family: Press Start 2P">
       <%= I18n.t("errors.messages.not_saved",

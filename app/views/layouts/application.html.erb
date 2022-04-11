@@ -13,10 +13,10 @@
   <body class="d-flex flex-column min-vh-100">
     <%= render 'partials/navigation' %>
     <div class="container">
-      <p id="notice"><%= notice %></p>
-    </div>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
 
-    <div class="container">
       <%= yield %>
     </div>
 
