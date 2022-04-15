@@ -6,7 +6,7 @@ class Subscription < ApplicationRecord
   validates :user_name, presence: true, unless: -> { user.present? }
   validates :user_email, presence: true, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i }, unless: -> { user.present? }
 
-  validates :user, uniqueness: { scope: :event_id } , if: -> { 'user.present?' }
+  validates :user, uniqueness: { scope: :event_id } , if: -> { user.present? }
   validates :user_email, uniqueness: { scope: :event_id } , unless: -> { user.present? }
 
   before_validation :check_event_owner
@@ -28,9 +28,11 @@ class Subscription < ApplicationRecord
     end
   end
 
+  private
+
   def check_event_owner
     if user == event.user
-      errors.add(:user, message: I18n.t('models.subscription.errors.own_event'))
+      errors.add(:user, :own_event)
     end
   end
 

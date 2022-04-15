@@ -20,13 +20,17 @@ ru:
       subscription:
         user_name: 'Твое имя странник'
         user_email: 'Email'
-        attributes:
+
+
     errors:
       models:
         subscription:
           attributes:
             user_email:
               email_used: 'уже есть в базе бро'
+            user:
+              own_event: 'Чиви это твой эвент, без тебя он и не состоится)'
+
 
   declinations:
     errors:
@@ -67,4 +71,29 @@ ru:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
-
+  send: 'Отправить'
+  minimum_symbols: 'знаков минимум'
+  registration: 'Зарегестрироваться'
+  log_in: 'Залогинится'
+  log_out: 'Выход'
+  enter: 'Войти'
+  profile: 'Профиль'
+  remember_me: 'Запомнить меня'
+  save: 'Сохранить'
+  update: 'Обновить'
+  back: 'Возвротится'
+  create_event: 'Создать событие'
+  change: 'Изменить'
+  destroy: 'Удалить'
+  calling: 'создал:'
+  subscribe: 'Подписаться'
+  will_come: 'будут:'
+  enjoy: 'я пойду:'
+  title: 'Bbq'
+  company: 'Velichko Ilia'
+  confirm: 'ожидаем подтверждения для'
+  characters_minimum: знаков минимум
+  no_entry_pass: '(не заполняй если не хочешь менять пароль)'
+  confirm: 'УВЕРЕН БРО?'
+  no_event_yet: 'Пользователь пока не организовал ни одного события'
+  

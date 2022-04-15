@@ -8,15 +8,15 @@
     </div>
 
     <% if devise_mapping.confirmable? && user.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= user.unconfirmed_email %></div>
+      <div><%= t('confirm') user.unconfirmed_email %></div>
     <% end %>
 
     <div class="mb-3">
-      <%= f.label :password, class: "form-label" %> <i>(не заполняй если не хочешь менять пароль)</i><br />
+      <%= f.label :password, class: "form-label" %> <i><%= t('no_entry_pass') %></i><br />
       <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
       <% if @minimum_password_length %>
         <br />
-        <em><%= @minimum_password_length %> characters minimum</em>
+        <em><%= @minimum_password_length  t('characters_minimum:') %></em>
       <% end %>
     </div>
 
@@ -25,11 +25,11 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
     </div>
 
-    <%= f.submit "Update", class: "btn btn-outline-success float-start me-3" %>
+    <%= f.submit t('update'), class: "btn btn-outline-success float-start me-3" %>
     
-    <%= button_to "Уничтожить аккаунт", registration_path(user), data: { confirm: "Are you sure?" },
+    <%= button_to t('destroy'), registration_path(user), data: { confirm: t('confirm') },
         method: :delete, class: "btn btn-outline-danger mb-3" %>
   <form>
 <% end %>
 
-<%= link_to "Назад", :back%>
+<%= link_to t('back'), :back%>

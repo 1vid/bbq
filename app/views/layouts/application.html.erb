@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bbq</title>
+    <title><%= t('title') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,15 +14,15 @@
     <%= render 'partials/navigation' %>
     <div class="container">
       <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
+        <p class="alert alert-success mt-3"><%= notice %></p>
       <% end %>
 
       <%= yield %>
     </div>
 
     <footer class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <span class="text-muted">&copy; Velichko Ilia 2022</span>
+      <div class="container text-muted">
+        <span >&copy; <%= t('company') %></span> <%= Time.current.year %>
       </div>
     </footer>
   </body>
