@@ -34,21 +34,21 @@ ru:
 
   declinations:
     errors:
-      one: "%{count} ошибка"
-      few: "%{count} ошибки"
-      many: "%{count} ошибок"
+      one: '%{count} ошибка'
+      few: '%{count} ошибки'
+      many: '%{count} ошибок'
       
   controllers:
     users:
-      updated: "Алилуя брат"
+      updated: 'Алилуя брат'
     events:
-      updated: "Событие обновлено"
-      created: "Ура, создали событие, го всех звать"
-      destroyed: "Событие безжалостно уничтожено"
+      updated: 'Событие обновлено'
+      created: 'Ура, создали событие, го всех звать'
+      destroyed: 'Событие безжалостно уничтожено'
     comments:
-      created: "Спасибо за коммент чувак"
-      error: "А вот фигушки, так нельзя"
-      destroyed: "Готово братюня, никто не увидит этого"
+      created: 'Спасибо за коммент чувак'
+      error: 'А вот фигушки, так нельзя'
+      destroyed: 'Готово братюня, никто не увидит этого'
     subscriptions:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
@@ -65,7 +65,7 @@ ru:
 
   comments:
     comment:
-      destroy_confirm: "Ты че пару пива убрал или реально хочешь удалит коммент?"
+      destroy_confirm: 'Ты че пару пива убрал или реально хочешь удалить коммент?'
 
   subscriptions:
     subscription:
@@ -105,4 +105,3 @@ ru:
   edit_profile: 'Редактировать профиль'
   editing_profile: 'Редактирование профиля'
   logo: 'Uuu... ʘ‿ʘ BBQ'
-  
