@@ -1,8 +1,10 @@
 module ApplicationHelper
   def user_avatar(user)
-    # TODO: Implement user_avatar
-    asset_pack_path('media/images/user.png')
-
+    if user.avatar.attached?
+      user.avatar.attach(params[:avatar])
+    else
+      asset_pack_path('media/images/user.png')
+    end
   end
 
   def devise_mapping

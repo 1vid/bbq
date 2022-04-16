@@ -17,7 +17,7 @@
     <div class="mb-3">
       <%= f.label :password, class: "form-label" %>
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length t('minimum_symbols') %>)</em>
+      <em>(<%= @minimum_password_length %> <%= t('minimum_symbols') %>)</em>
       <% end %><br />
       <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
     </div>
@@ -25,6 +25,11 @@
     <div class="mb-3">
       <%= f.label :password_confirmation, class: "form-label" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label t('avatar'), class: 'form-label'%>
+      <%= f.file_field :avatar, class: "form-control form-control-sm" %>
     </div>
 
     <div class="actions float-start me-3">
