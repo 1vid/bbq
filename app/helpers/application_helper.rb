@@ -1,7 +1,7 @@
 module ApplicationHelper
   def user_avatar(user)
     if user.avatar.attached?
-      user.avatar.attach(params[:avatar])
+      user.avatar.variant(resize_to_fit: [200, 200])
     else
       asset_pack_path('media/images/user.png')
     end
