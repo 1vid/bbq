@@ -5,8 +5,8 @@ class User < ApplicationRecord
   has_many :comments
   has_many :subscriptions
 
-  has_one_attached :avatar
-  
+  has_one_attached :avatar, dependent: :destroy
+
   validates :name, presence: true, length: { maximum: 35 }
 
   before_validation :set_name, on: :create

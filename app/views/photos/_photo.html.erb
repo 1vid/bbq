@@ -1,0 +1,14 @@
+<div class="event-photo my-2">
+  <% if current_user_can_edit?(photo) %>
+    <%= link_to(
+      fa_icon('trash'), event_photo_path(photo.event, photo),
+      method: :delete, data: {confirm: t('confirm.are_you_sure')}
+    ) %>
+  <% end %>
+  <%= link_to(
+    image_tag(photo.photo.variant(resize_to_limit: [50, 50])),
+    photo.photo, data: {lightbox: 'gallery'}
+    )%>
+  <%= t('.uploaded_by') %>
+  <%= render partial: 'users/user', object: photo.user %>
+</div>

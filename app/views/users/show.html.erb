@@ -1,9 +1,7 @@
 <div class="text-center">
   <h1><%= @user.name %></h1>
 
-  <%# image_tag user_avatar(@user) %>
-  <%= image_tag user_avatar(@user), class: "img-thumbnail rounded-circle" %>
-
+  <%= image_tag user_avatar(@user), class: "rounded" %>
   <% if @user == current_user %>
     <p class="my-2"><%= link_to t('edit_profile'),
       edit_user_path(@user), class: 'btn btn-primary' %></p>

@@ -7,6 +7,10 @@ module ApplicationHelper
     end
   end
 
+  def event_photos(event)
+    event.photos.variant(resize_to_fit: [200, 200])
+  end
+
   def devise_mapping
     Devise.mappings[:user]
   end

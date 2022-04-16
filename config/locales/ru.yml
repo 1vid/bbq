@@ -21,7 +21,6 @@ ru:
         user_name: 'Твое имя странник'
         user_email: 'Email'
 
-
     errors:
       models:
         subscription:
@@ -30,7 +29,6 @@ ru:
               email_used: 'уже есть в базе бро'
             user:
               own_event: 'Чиви это твой эвент, без тебя он и не состоится)'
-
 
   declinations:
     errors:
@@ -53,12 +51,14 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
   
       comment:
         body: 'Комментарий'
         user_name: 'Имя пользователя'
-
-
 
   confirm:
     are_you_sure: 'Уверен бро?'
@@ -70,6 +70,31 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
+  event_mailer:
+    comment:
+      subject: "Новая коммент у мероприятия %{title}"
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      subject: "Новая подписка на мероприятие %{title}"
+      title: 'Новая подПиска'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    photo_shot:
+      subject: "Новая фотография к мероприятию %{title}"
+      title: 'Новая фотография'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Дата и время'
+      owner: 'Организатор'
 
   send: 'Отправить'
   minimum_symbols: 'знаков минимум'
@@ -86,6 +111,7 @@ ru:
   create_event: 'Создать событие'
   change: 'Изменить'
   destroy: 'Удалить'
+  destroyed: 'Уничтожено'
   calling: 'создал:'
   subscribe: 'Подписаться'
   will_come: 'будут:'
@@ -106,3 +132,9 @@ ru:
   editing_profile: 'Редактирование профиля'
   logo: 'Uuu... ʘ‿ʘ BBQ'
   avatar: 'Ваша моська'
+  upload: 'Загрузить'
+  galary: 'Фоточки'
+  uploaded_by: 'Загружена'
+  created: 'Готово братюня'
+  will_go: 'Пойдут:'
+  go_event: 'перейти на страницу мероприятия'

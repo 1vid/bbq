@@ -1,0 +1,11 @@
+<%= form_for [@event, photo], html: { multipart: true } do |f| %>
+  <%= render "partials/form_errors", model: photo %>
+
+  <div class="mt-2">
+    <%= f.file_field :photo, class: "form-control form-control-sm " %>
+  </div>
+
+  <div class="actions my-2">
+    <%= f.submit t('upload'), class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>
