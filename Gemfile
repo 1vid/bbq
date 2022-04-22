@@ -13,7 +13,6 @@ gem 'rails-i18n', '~> 7.0.3'
 gem 'rails', '~> 6.1.5'
 gem 'webpacker', '~> 5.0'
 
-
 group :production do
   gem 'pg'
 end
