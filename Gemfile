@@ -19,7 +19,6 @@ end
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'letter_opener'
   gem 'pry-rails'
   gem 'sqlite3', '~> 1.4'
 end

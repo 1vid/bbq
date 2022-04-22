@@ -14,7 +14,10 @@
     <%= render 'partials/navigation' %>
     <div class="container">
       <% if notice %>
-        <p class="alert alert-success mt-3"><%= notice %></p>
+        <div class="alert alert-info mt-3 alert-dismissible fade show" role="alert">
+          <%= notice %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
       <% end %>
 
       <%= yield %>
