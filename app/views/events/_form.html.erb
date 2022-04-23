@@ -32,6 +32,11 @@
   </div>
 
   <div class="mt-2">
+    <%= form.label :pincode %>
+    <%= form.text_area :pincode, class: 'form-control' %>
+  </div>
+
+  <div class="mt-2">
     <%= form.submit t('save'), class: 'btn btn-primary' %>
     <%= t('or') %> <%= link_to t('back'), :back %>
   </div>

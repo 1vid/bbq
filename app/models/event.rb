@@ -9,4 +9,8 @@ class Event < ApplicationRecord
   validates :title, presence: true, length: { maximum: 255 }
   validates :address, presence: true
   validates :datetime, presence: true
+
+  def pincode_valid?(pin2chek)
+    pincode == pin2chek
+  end
 end
