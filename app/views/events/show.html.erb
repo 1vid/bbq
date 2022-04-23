@@ -1,3 +1,4 @@
+<script src="https://api-maps.yandex.ru/2.1/?apikey=<%= Rails.application.credentials.ym_api_key %>&lang=ru_RU" type="text/javascript"></script>
 <div class="event">
   <div class="event-info row">
     <div class="col-md-12">
@@ -32,7 +33,7 @@
     <div class=" border border-light rounded col-md-8">
       <div class="event-photos-gallery">
         <h5><%= t('galary') %></h5>
-        <%= render @event.photos.except(@new_photo) %>
+          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
       </div>
 
       <div class="event-photo-form mt-2">
@@ -41,7 +42,12 @@
         } unless current_user == @user %>
       </div>
     </div>
+
+
+
+
     <div class="col-md-4" >
+  
       <div class="event-owner">
         <h5><%= t('calling') %></h5>
         <p><%= render partial: 'users/user', object: @event.user %></p>
@@ -68,7 +74,10 @@
           </div>
         </div>
       <% end %>
+
     </div>
+
+    
     <div class="col-md-8">
       <div class="event-comments mt-2">
         <%= render partial: 'comments/form',
@@ -80,5 +89,8 @@
           collection: @event.comments.except(@new_comment).by_date %>
       </div>
     </div>
+    <div class="col-md-4">
+      <%= tag.div id: 'map', class: 'event-map', data: {address: @event.address} %>
+    </div> 
   </div>
 </div>

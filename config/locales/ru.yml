@@ -8,7 +8,7 @@ ru:
         email: 'Email'
         name: 'Имя'
         password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
+        confirm_new_password: 'Подтверждение пароля'
       event:
         title: 'Название'
         address: 'Место проведения'
@@ -62,8 +62,7 @@ ru:
         body: 'Комментарий'
         user_name: 'Имя пользователя'
 
-  confirm:
-    are_you_sure: 'Уверен бро?'
+
 
   comments:
     comment:
@@ -106,7 +105,8 @@ ru:
   characters_minimum: знаков минимум
   company: 'Velichko Ilia'
   confirm: 'ожидаем подтверждения для'
-  confirm: 'УВЕРЕН БРО?'
+  confirm:
+    are_you_sure: 'Уверен бро?'
   create_event: 'Создать событие'
   created: 'Готово братюня'
   destroy: 'Удалить'

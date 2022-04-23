@@ -38,6 +38,6 @@
     <%= f.submit t('update'), class: "btn btn-outline-success float-start me-3" %>
   <form>
 <% end %>
-<%= button_to t('destroy'), registration_path(@user), data: { confirm: t('confirm') },
+<%= button_to t('destroy'), registration_path(@user), data: { confirm: t('confirm.are_you_sure') },
     method: :delete, class: "btn btn-outline-danger mb-3" %>
 <%= link_to t('back'), :back%>

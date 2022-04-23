@@ -1,6 +1,7 @@
 import Rails from "@rails/ujs"
 import '../styles/application'
 import '../styles/user'
+import '../scripts/map'
 import 'bootstrap/dist/js/bootstrap'
 import '@fortawesome/fontawesome-free/css/all'
 import 'lightbox2/dist/js/lightbox-plus-jquery'
