@@ -41,17 +41,6 @@
       </div>
     </div>
     <% end %>
-
-    <% unless current_user == @user %>
-    <div class="col-md-8">
-        <div class="event-photo-form mt-2">
-          <%= render partial: 'photos/form', locals: {
-            photo: @new_photo || @event.photos.build
-          } %>
-        </div>
-    </div>
-    <% end %>
-
     <div class="col-md-4" >
       <div class="event-owner">
         <h5><%= t('calling') %></h5>
@@ -79,6 +68,15 @@
         </div>
       <% end %>
     </div>
+    <% unless current_user == @user %>
+    <div class="col-md-8">
+        <div class="event-photo-form mt-2">
+          <%= render partial: 'photos/form', locals: {
+            photo: @new_photo || @event.photos.build
+          } %>
+        </div>
+    </div>
+    <% end %>
     <div class="col-md-8">
       <div class="event-comments mt-2">
         <%= render partial: 'comments/form',
