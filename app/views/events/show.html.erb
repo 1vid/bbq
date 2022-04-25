@@ -1,4 +1,3 @@
-<script src="https://api-maps.yandex.ru/2.1/?apikey=<%= Rails.application.credentials.ym_api_key %>&lang=ru_RU" type="text/javascript"></script>
 <div class="event">
   <div class="event-info row">
     <div class="col-md-12">
@@ -25,21 +24,28 @@
             </div>
           <% end %>
         </div>
+        <div class="col-md-6">
+          <div class="event-map">
+            <%= tag.div id: 'map', class: 'event-map', data: {address: @event.address} %>
+          </div> 
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div class=" border border-light rounded col-md-8">
-      <div class="event-photos-gallery">
-        <h5><%= t('galary') %></h5>
-          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
-      </div>
-
-      <div class="event-photo-form mt-2">
-        <%= render partial: 'photos/form', locals: {
-          photo: @new_photo || @event.photos.build
-        } unless current_user == @user %>
+      <div class="event-photos">
+        <% if @event.photos.present? %>
+        <div class="event-photos-gallery">
+            <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+        </div>
+        <% end %>
+        <div class="event-photo-form mt-2">
+          <%= render partial: 'photos/form', locals: {
+            photo: @new_photo || @event.photos.build
+          } unless current_user == @user %>
+        </div>
       </div>
     </div>
 
@@ -64,7 +70,7 @@
         </div>
       </div>
       <% end %>
-      <% unless current_user_can_edit?(@event) %>
+      <% unless current_user_can_edit?(@event) || @event.subscribers.include?(current_user) %>
         <div class="event-subscription-form">
           <h5><%= t('enjoy') %></h5>
           <div>
@@ -89,8 +95,6 @@
           collection: @event.comments.except(@new_comment).by_date %>
       </div>
     </div>
-    <div class="col-md-4">
-      <%= tag.div id: 'map', class: 'event-map', data: {address: @event.address} %>
-    </div> 
+
   </div>
 </div>
