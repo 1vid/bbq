@@ -10,8 +10,9 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 '.bundle', 'public/system', 'public/uploads'
 
 set :keep_releases, 5
+set :assets_prefix, 'packs'
 
-Rake::Task["deploy:assets:backup_manifest"].clear_actions
+# Rake::Task["deploy:assets:backup_manifest"].clear_actions
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

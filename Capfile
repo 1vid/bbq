@@ -34,7 +34,7 @@ require "capistrano/rails"
 # require "capistrano/rails/assets"
 # require "capistrano/rails/migrations"
 require "capistrano/passenger"
-require "capistrano/rails/webpacker"
+# require "capistrano/rails/webpacker"
 
 set :rbenv_type, :user
 set :rbenv_ruby, '3.0.0'
